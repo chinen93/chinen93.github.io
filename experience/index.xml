@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experiences on </title>
+    <link>https://www.chinen93.github.io/experience/</link>
+    <description>Recent content in Experiences on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Oct 2024 15:41:34 -0400</lastBuildDate>
+    <atom:link href="https://www.chinen93.github.io/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Developer</title>
+      <link>https://www.chinen93.github.io/experience/2022_software_developer_ericsson/</link>
+      <pubDate>Thu, 17 Oct 2024 15:41:34 -0400</pubDate>
+      <guid>https://www.chinen93.github.io/experience/2022_software_developer_ericsson/</guid>
+      <description>&lt;p&gt;As a Software Developer working remotely with international teams (Brazil, Canada, India), I focused on enhancing Ericsson&amp;rsquo;s Digital Monetization Platform. My key responsibility was to implement new features and fix issues in microservices for product offering transactions. A significant portion of my work was spent on proof-of-concept projects, where I explored innovative ways to adapt Ericsson’s software solutions for new use cases. Daily, I worked with Camunda to handle system flows, modeled entities, developed Java and JavaScript code, mentored junior developers, and produced documentation. This role required expertise in microservice architecture, Kubernetes, process automation, and system integration to deliver scalable and functional solutions aligned with Ericsson’s goals.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software Developer</title>
+      <link>https://www.chinen93.github.io/experience/2020_software_developer_neuralmind/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0100</pubDate>
+      <guid>https://www.chinen93.github.io/experience/2020_software_developer_neuralmind/</guid>
+      <description>&lt;p&gt;I worked as a Software Developer for a year, focusing on building an automated tool that retrieved public documents to maintain compliance in transactions. This data was then displayed on a web dashboard. My daily tasks included coding in Python (Django) and JavaScript (React.js), conducting code reviews, and ensuring the project adhered to functional, non-functional, and design requirements.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Assisted in an automated system for searching and analyzing unstructured documents and images.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Artificial Intelligence Researcher</title>
+      <link>https://www.chinen93.github.io/experience/2019_ai_researcher_neuralmind/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.chinen93.github.io/experience/2019_ai_researcher_neuralmind/</guid>
+      <description>&lt;p&gt;I spent a year conducting Artificial Intelligence research, where I developed a Reinforcement Learning algorithm for trading Brazilian stocks. My key responsibility was to research, design the environment and train the AI models. In my day to day, I coded in Python (PyTorch), ran experiments, analyzed large datasets, and ensured our AI systems were scalable, accurate, and compliant with legal standards.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Conducted research and development of a reinforcement learning-based artificial intelligence designed to operate on the Brazilian stock market. Focused on maximizing daily profits by trading Bovespa mini-index contracts (WIN). Algorithm used Agent-Critic (AC), Proximal Policy Optimization (PPO), Soft Actor-Critic (SAC)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Teaching Assistant</title>
+      <link>https://www.chinen93.github.io/experience/2017_teaching_assistant_unicamp/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0100</pubDate>
+      <guid>https://www.chinen93.github.io/experience/2017_teaching_assistant_unicamp/</guid>
+      <description>&lt;p&gt;Assisted professors in delivering coursework related to software development, providing hands-on support to students during lab sessions.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Conducted study groups, clarifying complex concepts in data structures, and algorithm design, deepening students understanding of course material.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Offered constructive feedback to improve student technical skills and problem-solving abilities&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
