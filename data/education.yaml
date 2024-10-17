@@ -1,0 +1,11 @@
+enable: true
+title: "Education"
+items:
+
+  - university: "University of Campinas - UNICAMP"
+    year: "2015-2020"
+    degree: "Bachelor's Degree in Computer Science"
+
+  - university: "Campinas Technical College - COTUCA"
+    year: "2010-2014"
+    degree: "Information Technology Technician"

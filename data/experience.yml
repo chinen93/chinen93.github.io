@@ -1,0 +1,16 @@
+enable: true
+title: "Experience"
+description: >
+ Developed full-stack solutions across diverse environments, ensuring adaptability and efficiency. Contributed to an AI project, creating a reinforcement learning algorithm for stock trading. Focused on solving complex problems with simple, impactful solutions.
+button:
+  icon: "icon-linkedin-fill"
+  btnText: "Linkedin"
+  URL: "https://www.linkedin.com/in/pedrochinen/"
+button2:
+  icon: "icon-profile-fill"
+  btnText: "My Resume"
+  URL: "#"
+button3:
+  icon: "icon-arrow-right"
+  btnText: "All Experiences"
+  URL: "experience"

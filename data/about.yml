@@ -1,0 +1,22 @@
+enable: true
+title: "Who am I?"
+content: >
+  <p class="lead">
+  I’ve worked in both startups and large companies, gaining strong full-stack development skills. Startups taught me to adapt quickly and prioritize high-value tasks, while larger organizations emphasized the importance of structured development and risk management.
+  </p>
+  <p class="lead">
+  I excel at working both independently and in teams, using my attention to detail, communication, and organizational skills to enhance collaboration.
+  </p>
+  <p class="lead">
+  I’m deeply committed to continuous learning, exemplified by my ongoing pursuit of mastering <b>Emacs</b> — a powerful, highly customizable text editor with a steep learning curve. Despite a decade of daily use, I am still exploring its vast capabilities, learning something new every day.
+  </p>
+  <p class="lead">
+  Originally from Brazil, I have since relocated to the United States.
+  </p>
+button:
+  icon: "icon-smile-fill"
+  btnText: "About Me"
+  URL: "https://www.linkedin.com/in/pedrochinen/"
+image:
+  x: "images/who-am-i/picture.png"
+  _2x: "images/who-am-i/picture.png"

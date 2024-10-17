@@ -1,0 +1,35 @@
+enable: true
+title: "Hello, I'm Pedro Hideaki Uiechi Chinen."
+subtitle: "Software Developer"
+description: >
+  <p class="lead">
+  Based in the Charleston Metropolitan area, South Carolina.
+  </p>
+  <p class="lead">
+  As a software developer, I've worked across various domains, from AI to full-stack development, with a strong foundation in backend and frontend technologies. Throughout my career, I've consistently operated in agile environments, driving projects forward with flexibility and efficiency.
+  </p>
+  <p class="lead">
+  This portfolio showcases my achievements and shares insights on topics that inspire me.
+  </p>
+
+image:
+  x: "images/showcase/showcase.png"
+  _2x: "images/showcase/showcase@2x.png"
+
+imageMobile:
+  x: "images/showcase/showcase-mobile.jpg"
+
+button:
+  icon: "icon-mail-fill"
+  btnText: "Contact on LinkedIn"
+  URL: "https://www.linkedin.com/in/pedrochinen/"
+
+socialLinks:
+  - icon: "icon-linkedin-line"
+    URL: "https://www.linkedin.com/in/pedrochinen/"
+
+  - icon: "icon-github-line"
+    URL: "https://github.com/chinen93"
+
+  - icon: "icon-profile-fill"
+    URL: "https://leetcode.com/u/pedro_chinen/"
