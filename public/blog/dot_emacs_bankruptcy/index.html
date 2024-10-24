@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<meta name="theme-color" content="#478079" >
+
+
+
+<title></title>
+<meta name="description" content="">
+
+
+<style data-generator="critical-css">
+
+</style>
+
+
+
+    
+        
+        
+    
+
+    
+        
+        
+    
+
+    
+        
+        
+    
+
+
+
+
+
+ 
+
+
+<link
+  rel="preload"
+  href="/css/bundle.css"
+  as="style"
+  data-generator="purgeCSS"
+  onload="this.onload=null;this.rel='stylesheet'"
+  
+/>
+<noscript>
+  <link 
+    rel="stylesheet" 
+    href="/css/bundle.css"
+    
+  />
+</noscript>
+
+
+
+<script src='http://localhost:1313/js/library/lozad.min.js'></script>
+
+ 
+
+  </head>
+
+  <body>
+    
+
+<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-auto" href="http://localhost:1313/">
+          <span>Pedro</span>
+          <span>Chinen</span>
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://localhost:1313/">HOME</a>
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/blog"
+                >BLOG</a
+              >
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<section id="breadcrumb-bar" class="breadcrumb-bar container">
+        <ul class="breadcrumbs">
+            <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/blog">Blog</a></span></li><li class="breadcrum-item current">Dot Emacs Bankuptcy</li></ul>
+</section>
+
+
+    <section
+      id="blog-single"
+      class="section section--border-bottom rad-animation-group"
+    >
+      <div class="container">
+        <h1><a href="/blog/dot_emacs_bankruptcy/">Dot Emacs Bankuptcy</a></h1>
+
+        <aside id="meta" class="light-border-bottom">
+          <div>
+            <section>
+              Published on
+              <h4 id="date">Thu Sep 28, 2023</h4>
+            </section>
+             
+            <ul id="tags">
+              
+              <li><a href="/tags/emacs/">Emacs</a></li>
+              
+            </ul>
+            
+          </div>
+        </aside>
+
+        <aside class="content-browser light-border-bottom">
+	  Table of Contents:
+          <div>
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Current Configuration</a>
+</li>
+<li><a href="#headline-2">Dream Configuration</a>
+</li>
+</ul>
+</nav>
+          </div>
+        </aside>
+
+        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+          <div class="col-12">
+<p>
+I started using Emacs in 2015 during my first year of university, likely with version 25.1. It&#39;s hard to believe that it&#39;s been nearly a decade since I began my journey with this powerful tool. Over the years, I’ve experienced a couple of &#34;dot-emacs bankruptcies,&#34; where my configurations became too cumbersome and inefficient. But this time, things are different.</p>
+<p>
+In my early attempts, I experimented with all sorts of configurations, adding every new Elisp functions and macros inside my Emacs just trying new stuff and failing to make all work together. However, the result was chaos - startup times creeping up to two minutes and barely anything working.</p>
+<p>
+The second attempt was more informed but still fell short. With a more mature view of my Emacs usage and a better understanding of elisp to know what was going on I tried a new configuration. However, the result was bad but better than the privious time. I thought I knew what was going on but clearly I didn&#39;t.</p>
+<p>
+Now, on my third iteration. I removed everything unecessary. It is the best minimal and modular configuration I could use. But in my current job requires me to use using Windows instead of Linux, my configuration is suboptimal. The majority of the config expects some unix programs to run and Windows does not support them. In fact, my Emacs setup is no longet optimized for my workflow.</p>
+<p>
+So that is the reason for my dot emacs bankruptcy. To adequate my config for this new environment. Also to try to document some of the elisp code inside my config. Because even though I&#39;ve been using it for 8 years there is so much more to learn, discover and master with this incredibly versatile editor.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Current Configuration
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+I use a method to tangle specific source code blocks inside orgmode files and extract them to a &#34;.el&#34; file so that Emacs can read only these and possibilly compile them to be faster.</p>
+<p>
+The configuration is separated in these files</p>
+<div class="src src-text">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>   elisp
+</span></span><span style="display:flex;"><span>   init-backup.org
+</span></span><span style="display:flex;"><span>   init-basicConfig.org
+</span></span><span style="display:flex;"><span>   init-bookmark.org
+</span></span><span style="display:flex;"><span>   init-buffer-menu.org
+</span></span><span style="display:flex;"><span>   init-completion.org
+</span></span><span style="display:flex;"><span>   init-customFunctions.org
+</span></span><span style="display:flex;"><span>   init-denote.org
+</span></span><span style="display:flex;"><span>   init-elgrep.org
+</span></span><span style="display:flex;"><span>   init-flycheck.org
+</span></span><span style="display:flex;"><span>   init-fun.org
+</span></span><span style="display:flex;"><span>   init-grep.org
+</span></span><span style="display:flex;"><span>   init-hydra.org
+</span></span><span style="display:flex;"><span>   init-ibuffer.org
+</span></span><span style="display:flex;"><span>   init-ivy.org
+</span></span><span style="display:flex;"><span>   init-keyBinding.org
+</span></span><span style="display:flex;"><span>   init-ledger.org
+</span></span><span style="display:flex;"><span>   init-magit.org
+</span></span><span style="display:flex;"><span>   init-orgmode.org
+</span></span><span style="display:flex;"><span>   init-orgmode-packages.org
+</span></span><span style="display:flex;"><span>   init-playground.org
+</span></span><span style="display:flex;"><span>   init-programming.org
+</span></span><span style="display:flex;"><span>   init-setup-package.org
+</span></span><span style="display:flex;"><span>   init-spellcheck.org
+</span></span><span style="display:flex;"><span>   init-themes.org
+</span></span><span style="display:flex;"><span>   init-words.org
+</span></span><span style="display:flex;"><span>   init-yasnippet.org</span></span></code></pre></div>
+</div>
+<p>
+An init-emacs.org file is tangled first to create the base configuration that loads all the other parts.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Dream Configuration
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>
+Trim all the unused parts and make it simpler to add/improve modules in the future. Learn more about each part making it easier to share my dot emacs with others.</p>
+<p>
+Don&#39;t know if the best way to create the configuration file is to tangle different parts of an org mode inside the files or just create all the modules in elisp format and comment/remove the unecessary parts. And them create a more detailed org just to describe what was created in that moment.</p>
+</div>
+</div>
+</div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <div class="footer__copy">
+        © Pedro Chinen. Free Hugo theme by Adrián Moreno Peña.
+      </div>
+    </div>
+    <div class="footer__links">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:1313/">🏠 HOME</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">ABOUT</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="footer__right">
+      
+    </div>
+  </div>
+</footer>
+ <script>
+  window.addEventListener("load", function() {
+    try{
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      }); 
+      observer.observe();
+    } catch(e) {
+      console.error(e);
+    }
+  });
+</script>
+<script defer src='http://localhost:1313/js/rad-animations.js'></script>
+<script defer src='http://localhost:1313/js/library/smooth-scroll.polyfills.min.js'></script>
+<script defer src='http://localhost:1313/js/sticky-header.js'></script>
+<script defer src='http://localhost:1313/js/smooth-scroll-init.js'></script>
+<script defer src='http://localhost:1313/js/library/bootstrap.min.js'></script>
+
+  </body>
+</html>
+

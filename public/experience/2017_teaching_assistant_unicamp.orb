@@ -1,12 +1,12 @@
----
-date: 2017-12-01T00:00:00+01:00
-draft: false
-title: "Teaching Assistant"
-jobTitle: "Teaching Assistant"
-company: "University of Campinas"
-location: "Campinas, SP, Brazil"
-duration: "2017-2017"
----
+#+Title: Teaching Assistant
+#+date: [2017-12-01 Fri]
+#+lastmod: [2024-10-24 Sat]
+#+jobTitle: Teaching Assistant
+#+company: University of Campinas
+#+location: Campinas, SP, Brazil
+#+duration: 2017-2017
+#+draft: false
+
 
 Assisted professors in delivering coursework related to software development, providing hands-on support to students during lab sessions.
 
