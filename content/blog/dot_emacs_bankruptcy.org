@@ -1,12 +1,12 @@
-#+title: Dot Emacs Bankuptcy
+#+title: Dot Emacs Bankruptcy
 #+date: [2023-09-28 Thu]
-#+lastmod: [2024-10-24 Thu]
+#+lastmod: [2024-10-29 Tue]
 #+tags[]: Emacs
 #+draft: false
 
 I started using Emacs in 2015 during my first year of university, likely with version 25.1. It's hard to believe that it's been nearly a decade since I began my journey with this powerful tool. Over the years, I’ve experienced a couple of "dot-emacs bankruptcies," where my configurations became too cumbersome and inefficient. But this time, things are different.
 
-In my early attempts, I experimented with all sorts of configurations, adding every new Elisp functions and macros inside my Emacs just trying new stuff and failing to make all work together. However, the result was chaos - startup times creeping up to two minutes and barely anything working.
+In my early attempts, I experimented with all sorts of configurations, adding every new Elisp function and macro inside my Emacs just trying new stuff and failing to make all work together. However, the result was chaos - startup times creeping up to two minutes and barely anything working.
 
 The second attempt was more informed but still fell short. With a more mature view of my Emacs usage and a better understanding of elisp to know what was going on I tried a new configuration. However, the result was bad but better than the privious time. I thought I knew what was going on but clearly I didn't.
 
@@ -62,6 +62,6 @@ An init-emacs.org file is tangled first to create the base configuration that lo
 :Created:  2023-09-28
 :END:
 
-Trim all the unused parts and make it simpler to add/improve modules in the future. Learn more about each part making it easier to share my dot emacs with others.
+Trim all the unused parts and simplify adding/improving modules in the future. Learn more about each part making it easier to share my dot emacs with others.
 
-Don't know if the best way to create the configuration file is to tangle different parts of an org mode inside the files or just create all the modules in elisp format and comment/remove the unecessary parts. And them create a more detailed org just to describe what was created in that moment.
+I don't know if the best way to create the configuration file is to tangle different parts of an org mode inside the files or just create all the modules in elisp format and comment/remove the unecessary parts. Then create a more detailed org just to describe what was created at that moment.

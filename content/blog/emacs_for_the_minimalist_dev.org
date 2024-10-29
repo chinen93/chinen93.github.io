@@ -1,0 +1,229 @@
+#+title: Emacs for the Minimalist Developer: Building a Modular Setup
+#+date: [2024-10-29 Tue]
+#+lastmod: [2024-10-29 Tue]
+#+tags[]: Emacs
+#+draft: false
+
+Improved my current setup from the last Emacs setup. I’ve taken the modular configuration approach from my previous Emacs Bankruptcy post but refined it to be less granular. Rather than configuring each package in isolation, I've organized related configurations into broader groups, making it more adaptable and easier to make changes. This allows me to add new packages and configurations without hardcoding which org files need to be tangled (the process of transforming org text to elisp code), significantly simplifying the process.
+
+With this structure, I’m hopeful that the setup will be sustainable for the long term, with the flexibility to grow as I add more modules and customizations.
+
+
+Firstly, this setup works for my current versions:
+
+- Emacs Version that I'm Using: GNU Emacs 29.4 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646)) of 2024-08-02
+- Org Mode Version I'm Using: Org mode version 9.6.15
+
+The structure is the following:
+#+begin_src text
+  elisp
+  ... list of configuration files in org mode format
+  tests
+#+end_src
+
+1. A folder with compiled emacs lisp configuration
+2. A list of configuration files
+3. A folder with emacs tests for custom functions and behaviors
+
+* How My Modular Setup Works
+:PROPERTIES:
+:Created:  2024-10-29
+:END:
+
+Org Mode supports code blocks that can execute code in many programming languages and be part of the document - Literate Programming. My modular setup leverages these blocks allowing me to intercalate code and text to clarify each configuration choice. However, reading and executing all these blocks can slow down startup time. To improve perfomance, I extract each code block into separate elisp scripts with the following algorithm.
+
+First I'll introduce each part and explain its purpose. Then I'll bring everything together to provide a clear view of the whole picture.
+
+#+begin_src emacs-lisp :tangle no
+  ;;================================================
+  ;; (1)
+  ;;================================================
+  (defun tangle-section-canceled ()
+    "Return t if the current section header was CANCELED, else nil."
+    (save-excursion
+      (if (re-search-backward "^\\*+\\s-+\\(.*?\\)?\\s-*$" nil t)
+          (string-prefix-p "CANCELED" (match-string 1))
+        nil)))
+#+end_src
+
+The function tangle-section-canceled checks if the current org section heading contains the keyword "CANCELED" and returns True or False.
+
+
+#+begin_src emacs-lisp :tangle no
+  ;;================================================
+  ;; (2)
+  ;;================================================
+  (defun tangle-config-org (orgfile elfile)
+    "This function will write all source blocks from =config.org= into
+     =config.el= that are ...
+
+     - not marked as :tangle no
+     - have a source-code of =emacs-lisp=
+     - doesn't have the todo-marker CANCELED"
+#+end_src
+
+The function tangle-config-org performs the extraction from the code blocks into elisp files
+
+#+begin_src emacs-lisp :tangle no
+    ;;================================================
+    ;; (3)
+    ;;================================================
+    (let* ((body-list ())
+           (gc-cons-threshold most-positive-fixnum)
+           (org-babel-src-block-regexp
+            (concat
+             ;; (1) indentation                 (2) lang
+             "^\\([ \t]*\\)#\\+begin_src[ \t]+\\([^ \f\t\n\r\v]+\\)[ \t]*"
+             ;; (3) switches
+             "\\([^\":\n]*\"[^\"\n*]*\"[^\":\n]*\\|[^\":\n]*\\)"
+             ;; (4) header arguments
+             "\\([^\n]*\\)\n"
+             ;; (5) body
+             "\\([^\000]*?\n\\)??[ \t]*#\\+end_src")))
+#+end_src
+
+First it initialize variables: Set body-list to hold all code blocks; Increase the garbage collection threshold to reduce frequency and improve performance; Define the regular expression of code blocks
+
+#+begin_src emacs-lisp :tangle no
+      ;;================================================
+      ;; (4)
+      ;;================================================
+      (with-temp-buffer
+        (insert-file-contents orgfile)
+        (goto-char (point-min))
+        (while (re-search-forward org-babel-src-block-regexp nil t)
+          (let ((lang (match-string 2))
+                (args (match-string 4))
+                (body (match-string 5))
+                (canc (tangle-section-canceled)))
+            (when (and (string= lang "emacs-lisp")
+                       (not (string-match-p ":tangle\\s-+no" args))
+                       (not canc))
+              (add-to-list 'body-list body)))))
+#+end_src
+
+Extract source blocks: Open a temporary buffer with the content of the org file; Searches for the valid code blocks using the regex; Save the code in the body-list
+
+#+begin_src emacs-lisp :tangle no
+      ;;================================================
+      ;; (5)
+      ;;================================================
+      (with-temp-file elfile
+        (insert
+         (format ";; Don't edit this file, edit %s instead ...\n\n" orgfile))
+        (apply 'insert (reverse body-list)))
+#+end_src
+
+Write the output file with all the code extracted: Write a warning suggesting edits should be made in the original Org file; Write code extracted before
+
+#+begin_src emacs-lisp
+      ;;================================================
+      ;; (6)
+      ;;================================================
+      (message "Wrote %s ..." elfile)))
+#+end_src
+
+Completion message for this org file
+
+#+begin_src emacs-lisp
+  (defun tangle-section-canceled ()
+    "Return t if the current section header was CANCELED, else nil."
+    (save-excursion
+      (if (re-search-backward "^\\*+\\s-+\\(.*?\\)?\\s-*$" nil t)
+          (string-prefix-p "CANCELED" (match-string 1))
+        nil)))
+
+  (defun tangle-config-org (orgfile elfile)
+    "This function will write all source blocks from =config.org= into
+     =config.el= that are ...
+
+     - not marked as :tangle no
+     - have a source-code of =emacs-lisp=
+     - doesn't have the todo-marker CANCELED"
+    (let* ((body-list ())
+           (gc-cons-threshold most-positive-fixnum)
+           (org-babel-src-block-regexp
+            (concat
+             ;; (1) indentation                 (2) lang
+             "^\\([ \t]*\\)#\\+begin_src[ \t]+\\([^ \f\t\n\r\v]+\\)[ \t]*"
+             ;; (3) switches
+             "\\([^\":\n]*\"[^\"\n*]*\"[^\":\n]*\\|[^\":\n]*\\)"
+             ;; (4) header arguments
+             "\\([^\n]*\\)\n"
+             ;; (5) body
+             "\\([^\000]*?\n\\)??[ \t]*#\\+end_src")))
+
+      (with-temp-buffer
+        (insert-file-contents orgfile)
+        (goto-char (point-min))
+        (while (re-search-forward org-babel-src-block-regexp nil t)
+          (let ((lang (match-string 2))
+                (args (match-string 4))
+                (body (match-string 5))
+                (canc (tangle-section-canceled)))
+            (when (and (string= lang "emacs-lisp")
+                       (not (string-match-p ":tangle\\s-+no" args))
+                       (not canc))
+              (add-to-list 'body-list body)))))
+
+      (with-temp-file elfile
+        (insert
+         (format ";; Don't edit this file, edit %s instead ...\n\n" orgfile))
+        (apply 'insert (reverse body-list)))
+
+      (message "Wrote %s ..." elfile)))
+#+end_src
+
+All part together results in the following script. A function that extracts non-CANCELED, Emacs Lisp source blocks from org file, then writes them into an emacs lisp script for easier loading.
+
+Credit to: https://github.com/abrochard/emacs-config from which I copied this function.
+
+* Modules
+:PROPERTIES:
+:Created:  2024-10-29
+:END:
+
+- init-setup-package.org: Initial Emacs configuration to make sure everything is loaded before the other packages
+
+- init-basicConfig.org: Along the setup package but has global variables and the minimum of emacs config
+
+- init-appearance.org: Themes, Font, Mode Line Format
+
+- init-coding.org: Packages and functions for programming languages
+
+- init-completion.org: Auto completion for writing code and prose
+
+- init-customFunctions.org: Personal and stolen functions from the internet
+
+- init-evil.org: Tries to make evil - Emacs + Vim - work with my workflow
+
+- init-hydra.org: Menus to repeatedly used functions
+
+- init-keyBinding.org: Custom key mapping
+
+- init-metrics.org: Meta information about Emacs and my usage workflow
+
+- init-minibuffer.org: Minibuffer functionalities
+
+- init-my-buffer-meny.org: Personal package trying to implement hydra
+
+- init-navigation.org: How to navigate between and inside buffers
+
+- init-orgmode.org: Org Mode configuration
+
+- init-personal-organization.org: How to handle different kinds of files. Finance, Knowledge
+
+- init-reading.org: Packages related to reading text and other types of formats inside Emacs
+
+- init-searching.org: How to find information in my knowledge folder
+
+- init-spelling.org: Autocorrect and spell checkers
+
+- init-tests.org: Information about configuration tests
+
+- init-web.org: Web searching and functions that need external web pages
+
+- init-writing.org: Make writing easier with snippets and personal preferences about how to write
+
+
+My complete Emacs configuration can be seen at https://github.com/chinen93/dotfiles-emacs
