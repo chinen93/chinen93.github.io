@@ -1,0 +1,116 @@
+#+title: Ledger Reports in Emacs
+#+date: [2025-01-10 Fri]
+#+lastmod: [2025-01-10 Fri]
+#+tags[]: Emacs
+#+draft: false
+
+A ledger is a record-keeping system used to track and manage financial transactions, balances, and accounts. It serves as a central repository of all financial data for an individual, organization, or business. Ledgers are used in accounting to organize and summarize financial information, facilitating the preparation of financial statements.
+
+Plaintext Accounting (https://plaintextaccounting.org) provides valuable resources on managing financial data using plain text as the primary storage format for transactions.
+
+With Emacs powerful text editing capabilities this type of data is easy to handle. Additionally, Emacs allows me to integrate this workflow into the same plain-text-based system I use for my notes, creating a unified and consistent approach to organizing information."
+
+#+ATTR_HTML: :width 450px :align center
+#+CAPTION: Closeup of a typical pen and peper ledger
+[[/posts/imgs/ledger_closeup.jpeg]]
+
+* Ledger CLI - Program
+:PROPERTIES:
+:Created:  2025-01-10
+:END:
+
+Ledger CLI (https://ledger-cli.org) is a powerful, double-entry accounting system accessed from the UNIX command-line. Ledger is written by John Wiegley
+
+Emacs has some functions and configurations to integrate this program in its workflow. With ledger-mode (https://github.com/ledger/ledger-mode) you can insert transactions and retrieve reports about your finances.
+
+A Ledger transaction has the following format:
+
+#+begin_src
+2025-01-10   Transaction Identifier
+    Expenses:Food:Market Y                   $15.00
+    Expenses:Food:Market X                   $10.00
+    Assets:Bank:CreditCard
+#+end_src
+
+In the reports, it is possible to limit how deep an account goes for the report. For example, you may want to know how much was spent in each market. Or the total spent in the food category.
+
+* Reports
+:PROPERTIES:
+:Created:  2025-01-10
+:END:
+
+To learn more about the reports in ledger (https://ledger-cli.org/doc/ledger3.html#Run-a-Few-Reports).
+
+The variable *ledger-reports* saves all reports that can be used by the command *ledger-report*.
+
+At first, its default reports are:
+- Balance
+- Register
+- Register by Payee
+- Register by Account
+
+But those reports does not have a filter for the information and makes reports based on all data in the ledger file. Not the ideal scenario for my problems. So I changed those reports to be:
+- Balance
+- Balance per Month
+- Balance Summary per Month
+- Balance per Year
+- Balance Summary per Year
+- Register by Account
+
+The difference between *Balance* and *Balance Summary* is necessary because my saved transactions format. As was said before the granularity of the report depends on what you want to see. How much was spent in each place or how much in the category itself.
+
+** Configuration
+:PROPERTIES:
+:Created:  2025-01-10
+:END:
+
+I made some changes to handle years easily. Becauseledger-mode mainly works with month.
+#+begin_src emacs-lisp
+  (defun ledger-report-year-format-specifier ()
+    "Substitute current year."
+    (with-current-buffer (or ledger-report-buffer-name (current-buffer))
+      (let* ((month (or ledger-report-current-month (ledger-report--current-month)))
+             (year (car month)))
+        (format "%s" year))))
+
+  (setq ledger-report-format-specifiers
+        '(("ledger-file" . ledger-report-ledger-file-format-specifier)
+          ("binary" . ledger-report-binary-format-specifier)
+          ("payee" . ledger-report-payee-format-specifier)
+          ("account" . ledger-report-account-format-specifier)
+          ("month" . ledger-report-month-format-specifier)
+          ("tagname" . ledger-report-tagname-format-specifier)
+          ("tagvalue" . ledger-report-tagvalue-format-specifier)
+
+          ;; My changes to the report format specifiers
+          ("year" . ledger-report-year-format-specifier)))
+
+  (defun ledger-report-previous-year ()
+    "Rebuild report with transactions from the previous month."
+    (interactive)
+    (ledger-report--change-month -12))
+
+  (defun ledger-report-next-year ()
+    "Rebuild report with transactions from the next month."
+    (interactive)
+    (ledger-report--change-month 12))
+#+end_src
+
+Then I changed the *ledger-reports* variable to have the reports I wanted.
+
+#+begin_src emacs-lisp
+ (when (featurep 'ledger-mode)
+    (let ((binary "%(binary) -f %(ledger-file) "))
+      (setq ledger-reports
+            `(
+              ("bal"            ,(concat binary "bal"))
+              ("bal month" ,(concat binary "bal -p %(month) -S amount"))
+              ("bal month summary" ,(concat binary "bal -p %(month) -S amount --depth 2"))
+              ("bal year"  ,(concat binary "bal -p %(year) -S amount"))
+              ("bal year summary" ,(concat binary "bal -p %(year) -S amount --depth 2"))
+              ("account"        ,(concat binary "reg %(account)"))
+              )
+            )))
+#+end_src
+
+Now I can see exactly how much and where I spend my money.

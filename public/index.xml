@@ -6,8 +6,15 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ledger Reports in Emacs</title>
+      <link>http://localhost:1313/blog/emacs_ledger_reports/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/emacs_ledger_reports/</guid>
+      <description>&lt;p&gt;&#xA;A ledger is a record-keeping system used to track and manage financial transactions, balances, and accounts. It serves as a central repository of all financial data for an individual, organization, or business. Ledgers are used in accounting to organize and summarize financial information, facilitating the preparation of financial statements.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Plaintext Accounting (&lt;a href=&#34;https://plaintextaccounting.org)&#34;&gt;https://plaintextaccounting.org)&lt;/a&gt; provides valuable resources on managing financial data using plain text as the primary storage format for transactions.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;With Emacs powerful text editing capabilities this type of data is easy to handle. Additionally, Emacs allows me to integrate this workflow into the same plain-text-based system I use for my notes, creating a unified and consistent approach to organizing information.&amp;#34;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Emacs for the Minimalist Developer: Building a Modular Setup</title>
       <link>http://localhost:1313/blog/emacs_for_the_minimalist_dev/</link>

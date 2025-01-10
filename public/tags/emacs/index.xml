@@ -6,14 +6,28 @@
     <description>Recent content in Emacs on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ledger Reports in Emacs</title>
+      <link>http://localhost:1313/blog/emacs_ledger_reports/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/emacs_ledger_reports/</guid>
+      <description>&lt;p&gt;&#xA;A ledger is a record-keeping system used to track and manage financial transactions, balances, and accounts. It serves as a central repository of all financial data for an individual, organization, or business. Ledgers are used in accounting to organize and summarize financial information, facilitating the preparation of financial statements.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Plaintext Accounting (&lt;a href=&#34;https://plaintextaccounting.org)&#34;&gt;https://plaintextaccounting.org)&lt;/a&gt; provides valuable resources on managing financial data using plain text as the primary storage format for transactions.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;With Emacs powerful text editing capabilities this type of data is easy to handle. Additionally, Emacs allows me to integrate this workflow into the same plain-text-based system I use for my notes, creating a unified and consistent approach to organizing information.&amp;#34;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs for the Minimalist Developer: Building a Modular Setup</title>
+      <link>http://localhost:1313/blog/emacs_for_the_minimalist_dev/</link>
+      <pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/emacs_for_the_minimalist_dev/</guid>
+      <description>&lt;p&gt;&#xA;Improved my current setup from the last Emacs setup. I’ve taken the modular configuration approach from my previous Emacs Bankruptcy post but refined it to be less granular. Rather than configuring each package in isolation, I&amp;#39;ve organized related configurations into broader groups, making it more adaptable and easier to make changes. This allows me to add new packages and configurations without hardcoding which org files need to be tangled (the process of transforming org text to elisp code), significantly simplifying the process.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dot Emacs Bankruptcy</title>
       <link>http://localhost:1313/blog/dot_emacs_bankruptcy/</link>
       <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/dot_emacs_bankruptcy/</guid>
-      <description>&lt;p&gt;&#xA;I started using Emacs in 2015 during my first year of university, likely with version 25.1. It&amp;#39;s hard to believe that it&amp;#39;s been nearly a decade since I began my journey with this powerful tool. Over the years, I’ve experienced a couple of &amp;#34;dot-emacs bankruptcies,&amp;#34; where my configurations became too cumbersome and inefficient. But this time, things are different.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;In my early attempts, I experimented with all sorts of configurations, adding every new Elisp functions and macros inside my Emacs just trying new stuff and failing to make all work together. However, the result was chaos - startup times creeping up to two minutes and barely anything working.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&#xA;I started using Emacs in 2015 during my first year of university, likely with version 25.1. It&amp;#39;s hard to believe that it&amp;#39;s been nearly a decade since I began my journey with this powerful tool. Over the years, I’ve experienced a couple of &amp;#34;dot-emacs bankruptcies,&amp;#34; where my configurations became too cumbersome and inefficient. But this time, things are different.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;In my early attempts, I experimented with all sorts of configurations, adding every new Elisp function and macro inside my Emacs just trying new stuff and failing to make all work together. However, the result was chaos - startup times creeping up to two minutes and barely anything working.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
