@@ -1,0 +1,12 @@
+#+title: PyPocket
+#+date: [2017-08-22 Tue]
+#+lastmod: [2025-01-14 Tue]
+#+draft: false
+
+Repository link: https://github.com/chinen93/PyPocket
+
+PyPocket is a project that import some itens from pocket with a specific tag. It appends those imported itens into a file. The default file is ~/pocket.org, but you can change it with when calling the program.
+
+It uses Python 3.
+
+The itens that are gotten are those with a specific tag. The default tag is *export emacs*.

@@ -6,28 +6,28 @@
     <description>Recent content in Projects on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Aug 2024 09:53:42 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Radity Finance - UI Kit</title>
-      <link>http://localhost:1313/projects/radity-finance-uikit/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/radity-finance-uikit/</guid>
-      <description>&lt;p&gt;We have been receiving a lot of requests for a Finance Kit recently due to the popularity of Fintech.&lt;/p&gt;</description>
+      <title>Macro Simulations</title>
+      <link>http://localhost:1313/projects/macro_simulations/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/macro_simulations/</guid>
+      <description>&lt;p&gt;&#xA;Repository link: &lt;a href=&#34;https://github.com/chinen93/macro-simulate&#34;&gt;https://github.com/chinen93/macro-simulate&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Programs to simulate a sequence of keyboard inputs in a specific setting. Those inputs were necessary to update an inventory database using a program that didn&amp;#39;t support macros. So I create the following programs to be able to read from a file and input simulate keyboard presses. Automating some steps.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Simulation created:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Macro Simulation&lt;/li&gt;&#xA;&lt;li&gt;Register Simulation&lt;/li&gt;&#xA;&lt;li&gt;Location Simulation&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Robo Advisor</title>
-      <link>http://localhost:1313/projects/robo-advisor/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/robo-advisor/</guid>
-      <description>&lt;p&gt;Robo Advisor is a Swiss Wealth Manager and wants to create the best digital experience for its UNHW clients across the world. We started with a whiteboard.&lt;/p&gt;</description>
+      <title>PyPocket</title>
+      <link>http://localhost:1313/projects/pypocket/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/pypocket/</guid>
+      <description>&lt;p&gt;&#xA;Repository link: &lt;a href=&#34;https://github.com/chinen93/PyPocket&#34;&gt;https://github.com/chinen93/PyPocket&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;PyPocket is a project that import some itens from pocket with a specific tag. It appends those imported itens into a file. The default file is ~/pocket.org, but you can change it with when calling the program.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;It uses Python 3.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;The itens that are gotten are those with a specific tag. The default tag is &lt;strong&gt;export emacs&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Swiss Fintech Website</title>
-      <link>http://localhost:1313/projects/swiss-fintech/</link>
-      <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/projects/swiss-fintech/</guid>
-      <description>&lt;p&gt;The Swiss Finance + Technology Association is the leading FinTech hub in Switzerland.&lt;/p&gt;</description>
+      <title>Dot Emacs Configuration</title>
+      <link>http://localhost:1313/projects/dot_emacs_configuration/</link>
+      <pubDate>Wed, 23 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/dot_emacs_configuration/</guid>
+      <description>&lt;p&gt;&#xA;Repository link: &lt;a href=&#34;https://github.com/chinen93/dotfiles-emacs&#34;&gt;https://github.com/chinen93/dotfiles-emacs&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;My personal 8+ years Emacs configuration, written in Emacs Lisp.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Emacs is a highly customizable and extensible text editor that can be used for various tasks, including coding, text editing, and project management. It’s built with Emacs Lisp, allowing users to modify its behavior and functions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

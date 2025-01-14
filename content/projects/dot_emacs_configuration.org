@@ -1,0 +1,12 @@
+#+title: Dot Emacs Configuration
+#+date: [2016-03-23 Wed]
+#+lastmod: [2025-01-14 Tue]
+#+draft: false
+
+Repository link: https://github.com/chinen93/dotfiles-emacs
+
+My personal 8+ years Emacs configuration, written in Emacs Lisp.
+
+Emacs is a highly customizable and extensible text editor that can be used for various tasks, including coding, text editing, and project management. It’s built with Emacs Lisp, allowing users to modify its behavior and functions.
+
+

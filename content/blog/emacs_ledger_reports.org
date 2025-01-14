@@ -6,7 +6,7 @@
 
 A ledger is a record-keeping system used to track and manage financial transactions, balances, and accounts. It serves as a central repository of all financial data for an individual, organization, or business. Ledgers are used in accounting to organize and summarize financial information, facilitating the preparation of financial statements.
 
-Plaintext Accounting (https://plaintextaccounting.org) provides valuable resources on managing financial data using plain text as the primary storage format for transactions.
+Plaintext Accounting ( https://plaintextaccounting.org ) provides valuable resources on managing financial data using plain text as the primary storage format for transactions.
 
 With Emacs powerful text editing capabilities this type of data is easy to handle. Additionally, Emacs allows me to integrate this workflow into the same plain-text-based system I use for my notes, creating a unified and consistent approach to organizing information."
 
@@ -19,9 +19,9 @@ With Emacs powerful text editing capabilities this type of data is easy to handl
 :Created:  2025-01-10
 :END:
 
-Ledger CLI (https://ledger-cli.org) is a powerful, double-entry accounting system accessed from the UNIX command-line. Ledger is written by John Wiegley
+Ledger CLI ( https://ledger-cli.org ) is a powerful, double-entry accounting system accessed from the UNIX command-line. Ledger is written by John Wiegley
 
-Emacs has some functions and configurations to integrate this program in its workflow. With ledger-mode (https://github.com/ledger/ledger-mode) you can insert transactions and retrieve reports about your finances.
+Emacs has some functions and configurations to integrate this program in its workflow. With ledger-mode ( https://github.com/ledger/ledger-mode ) you can insert transactions and retrieve reports about your finances.
 
 A Ledger transaction has the following format:
 
@@ -39,7 +39,7 @@ In the reports, it is possible to limit how deep an account goes for the report.
 :Created:  2025-01-10
 :END:
 
-To learn more about the reports in ledger (https://ledger-cli.org/doc/ledger3.html#Run-a-Few-Reports).
+To learn more about the reports in ledger ( https://ledger-cli.org/doc/ledger3.html#Run-a-Few-Reports ).
 
 The variable *ledger-reports* saves all reports that can be used by the command *ledger-report*.
 

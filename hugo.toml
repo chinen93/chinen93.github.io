@@ -30,10 +30,10 @@ theme = "adritian-free-hugo-theme"
   URL = "#about"
   weight = 2
 
-  #[[menu.header]]
-  #name = "Portfolio"
-  #URL = "#portfolio"
-  #weight = 3
+  [[menu.header]]
+  name = "Projects"
+  URL = "/projects"
+  weight = 3
 
   [[menu.header]]
   name = "Experience"
@@ -55,10 +55,10 @@ theme = "adritian-free-hugo-theme"
   URL = "#about"
   weight = 2
 
-  #[[menu.footer]]
-  #name = "Portfolio"
-  #URL = "#portfolio"
-  #weight = 3
+  [[menu.footer]]
+  name = "Projects"
+  URL = "/projects"
+  weight = 3
 
   #[[menu.footer]]
   #name = "Contact"
@@ -85,7 +85,7 @@ theme = "adritian-free-hugo-theme"
     text2 = "Chinen"
 
   [params.footer]
-      copyright = "© Pedro Chinen. Free Hugo theme by Adrián Moreno Peña."
+      copyright = "© Pedro Chinen. Free Hugo theme by <a href=\"https://github.com/zetxek/adrianmoreno.info\">Adrián Moreno Peña</a>."
       [params.footer.radity_logo]
         x = "img/general/design-and-code-radity.png"
         _2x = "img/general/design-and-code-radity@2x.png"

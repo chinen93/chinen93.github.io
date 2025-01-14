@@ -1,0 +1,13 @@
+#+title: Macro Simulations
+#+date: [2018-01-22 Mon]
+#+lastmod: [2025-01-14 Tue]
+#+draft: false
+
+Repository link: https://github.com/chinen93/macro-simulate
+
+Programs to simulate a sequence of keyboard inputs in a specific setting. Those inputs were necessary to update an inventory database using a program that didn't support macros. So I create the following programs to be able to read from a file and input simulate keyboard presses. Automating some steps.
+
+Simulation created:
+- Macro Simulation
+- Register Simulation
+- Location Simulation

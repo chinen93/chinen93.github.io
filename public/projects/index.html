@@ -101,6 +101,12 @@
             </li>
             
             <li class="nav-item">
+              <a data-scroll class="nav-link" href="/projects"
+                >PROJECTS</a
+              >
+            </li>
+            
+            <li class="nav-item">
               <a data-scroll class="nav-link" href="/#experience"
                 >EXPERIENCE</a
               >
@@ -126,19 +132,110 @@
 </section>
 
 
-  <main class="list"> 
+  <main class="blog"> 
     <section class="container section">
-      <h1>Projects</h1>
-      <ul>
+      <h1 class="rad-fade-down rad-waiting rad-animate">Projects</h1>
+      <div class="posts-list container">
         
         
-          
+          <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
+          <article class="post summary col-12">
+  <header>
+    <h2><a href="/projects/macro_simulations/">Macro Simulations</a></h2>
+    <div class="post-meta">
+      Mon, Jan 22, 2018
+    </div>
+  </header>
+  <div class="post-summary post-content">
+  <p>
+Repository link: <a href="https://github.com/chinen93/macro-simulate">https://github.com/chinen93/macro-simulate</a></p>
+<p>
+Programs to simulate a sequence of keyboard inputs in a specific setting. Those inputs were necessary to update an inventory database using a program that didn&#39;t support macros. So I create the following programs to be able to read from a file and input simulate keyboard presses. Automating some steps.</p>
+<p>
+Simulation created:</p>
+<ul>
+<li>Macro Simulation</li>
+<li>Register Simulation</li>
+<li>Location Simulation</li>
+</ul>
+  </div>
+
+  <footer class="">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <a class="btn btn-outline-secondary btn-sm" href="/projects/macro_simulations/"
+          >Read&nbsp;more&nbsp;&raquo;</a
+        >
+      </div>
+    </div>
+  </footer>
+</article>
+
+          </div>
         
-          
+          <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
+          <article class="post summary col-12">
+  <header>
+    <h2><a href="/projects/pypocket/">PyPocket</a></h2>
+    <div class="post-meta">
+      Tue, Aug 22, 2017
+    </div>
+  </header>
+  <div class="post-summary post-content">
+  <p>
+Repository link: <a href="https://github.com/chinen93/PyPocket">https://github.com/chinen93/PyPocket</a></p>
+<p>
+PyPocket is a project that import some itens from pocket with a specific tag. It appends those imported itens into a file. The default file is ~/pocket.org, but you can change it with when calling the program.</p>
+<p>
+It uses Python 3.</p>
+<p>
+The itens that are gotten are those with a specific tag. The default tag is <strong>export emacs</strong>.</p>
+  </div>
+
+  <footer class="">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <a class="btn btn-outline-secondary btn-sm" href="/projects/pypocket/"
+          >Read&nbsp;more&nbsp;&raquo;</a
+        >
+      </div>
+    </div>
+  </footer>
+</article>
+
+          </div>
         
-          
+          <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
+          <article class="post summary col-12">
+  <header>
+    <h2><a href="/projects/dot_emacs_configuration/">Dot Emacs Configuration</a></h2>
+    <div class="post-meta">
+      Wed, Mar 23, 2016
+    </div>
+  </header>
+  <div class="post-summary post-content">
+  <p>
+Repository link: <a href="https://github.com/chinen93/dotfiles-emacs">https://github.com/chinen93/dotfiles-emacs</a></p>
+<p>
+My personal 8+ years Emacs configuration, written in Emacs Lisp.</p>
+<p>
+Emacs is a highly customizable and extensible text editor that can be used for various tasks, including coding, text editing, and project management. It’s built with Emacs Lisp, allowing users to modify its behavior and functions.</p>
+  </div>
+
+  <footer class="">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <a class="btn btn-outline-secondary btn-sm" href="/projects/dot_emacs_configuration/"
+          >Read&nbsp;more&nbsp;&raquo;</a
+        >
+      </div>
+    </div>
+  </footer>
+</article>
+
+          </div>
         
-      </ul>
+      </div>
     </section>
   </main>
 
@@ -146,7 +243,7 @@
   <div class="container">
     <div class="footer__left">
       <div class="footer__copy">
-        © Pedro Chinen. Free Hugo theme by Adrián Moreno Peña.
+        © Pedro Chinen. Free Hugo theme by <a href="https://github.com/zetxek/adrianmoreno.info">Adrián Moreno Peña</a>.
       </div>
     </div>
     <div class="footer__links">
@@ -157,6 +254,10 @@
         
         <li class="nav-item">
           <a class="nav-link" href="/#about">ABOUT</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/projects">PROJECTS</a>
         </li>
         
       </ul>

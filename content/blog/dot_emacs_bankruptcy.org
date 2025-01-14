@@ -1,6 +1,6 @@
 #+title: Dot Emacs Bankruptcy
 #+date: [2023-09-28 Thu]
-#+lastmod: [2024-10-29 Tue]
+#+lastmod: [2025-01-14 Tue]
 #+tags[]: Emacs
 #+draft: false
 
